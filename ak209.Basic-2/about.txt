@@ -1,0 +1,5 @@
+Theme name:		ak209 - Basic 1.0
+Description:	A custom blog theme modified from 'Th3f' built upon "Clean Blog" from Startbootstrap
+Author name:	ak209
+Author site:	http://ak209.com
+License:		http://ak209.com
