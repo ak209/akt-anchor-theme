@@ -1,18 +1,32 @@
 
-** BASIC 2 for Anchor CMS **
+* BASIC 2 for Anchor CMS *
 
-/ ===================== /
+// -------------------------------- //
 
-***English***
 
 A basic and minimalist theme for AnchorCMS. Based on 'Basic' written by 'Th3f'. This theme adds in 
 
+ - more to come -
 
-=====================
 
-Missing Feautures:
+// -------------------------------- //
 
-- Search
+** Updates **
+
+- Added in images to posts by adding 'sidebar_image' as a custom field to posts and pages.
+- Added breakpoints for the header image to accomodate new device widths.
+
+*** Next Up ***
+
+- Adding in custom logo for top-left to apply globally. 
+
+
+// -------------------------------- //
+
+
+***Missing things:***
+
+- Search, theres no search yet
 
 
 ![Screenshot of BASIC 2](--url-of-screenshot--)
