@@ -12,10 +12,14 @@
 <title><?php echo page_title(); ?> | <?php echo site_name(); ?></title>
 
 <!-- Bootstrap Core CSS -->
-<link href="<?php echo theme_url('css/bootstrap.min.css'); ?>" rel="stylesheet">
+<!-- <link href="<?php echo theme_url('css/bootstrap.min.css'); ?>" rel="stylesheet"> -->
 
 <!-- Custom CSS -->
-<link href="<?php echo theme_url('css/basic.css'); ?>" rel="stylesheet">
+<!-- <link href="<?php echo theme_url('css/basic.css'); ?>" rel="stylesheet"> -->
+
+<link href="css/reset.css" rel="stylesheet">
+<link href="css/basic-3.css" rel="stylesheet">
+
 
 <!-- Custom Fonts -->
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -90,3 +94,53 @@
   </div>
 </div>
 </header>
+<?//php theme_include('header'); ?>
+<section class="content wrap" id="article-<?php echo article_id(); ?>">
+  <article>
+    <div id="indy-article" class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          <h2 clas="article_category-title"><?php echo article_category(); ?></h2>
+          <div class="marquis-block">
+            <h1><?php echo article_title(); ?></h1>
+            <h3 class="post-subtitle"><?php echo article_description(); ?></h3>
+            <h5 class="byline">Written on <?php echo article_date(); ?></h5>
+            <?php if (($img = article_custom_field('sidebar_image')) || ($img = page_custom_field('sidebar_image'))): ?>
+              <div class="article-pic" style="background-image: url('<?php echo $img; ?>');"></div>
+            <?php endif; ?>
+          </div>
+          <div class="guts">
+            <?php echo article_markdown(); ?>
+            <hr />
+          </div>
+        </div> 
+      </div>
+    </div>
+  </article>
+  <hr />
+</section>
+<?//php theme_include('footer'); ?>
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <!-- <div class="inner"> -->
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <p class="copyright text-muted">&copy; <?php echo date('Y'); ?> Andy Thomas | This theme 'Basic-2' Designed to run on AnchorCMS by <a href="http://andythomas.ca">@ak209</a> - Based on an empty theme from <a href="http://startbootstrap.com" target="_blank">StartBootstrap</a></p>   
+      <ul class="soc-icons">
+        <li><a href="http://instagram.com/<?php echo site_meta('twitter_account'); ?>"><img src="/themes/ak209.Basic-2/img/instagram-icon.png" alt="My Instagram" title="My Instagram"></a></li>
+        <li><a href="https://twitter.com/<?php echo site_meta('instagram_account'); ?>"><img src="/themes/ak209.Basic-2/img/twitter-icon.png" alt="My Twitter" title="My Twitter"></a></li>
+        <li><a href="http://ca.linkedin.com/in/<?php echo site_meta('linkedin_account'); ?>/"><img src="/themes/ak209.Basic-2/img/linkedin-icon.png" alt="My LinkedIn" title="My LinkedIn"></a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<!-- jQuery -->
+<script src="<?php echo theme_url('js/jquery.js'); ?>"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="<?php echo theme_url('js/bootstrap.min.js'); ?>"></script>
+
+</body>
+
+</html>
+
